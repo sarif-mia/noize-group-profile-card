@@ -56,48 +56,31 @@
       margin-bottom: 0.75rem;
       color: #4b4037;
     }
-    .contact-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    .contact-card {
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      border: none;
     }
-
-    .contact-list a {
-      color: #4b4037;
-      text-decoration: none;
-    }
-
-    .contact-list a:hover {
-      text-decoration: underline;
-    }
-    .contact-list li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.5rem;
-      font-size: 0.98rem;
-    }
-    .contact-list i {
-      font-size: 1.1rem;
-      color: #4b4037;
-      margin-right: 0.5rem;
-      min-width: 24px;
+    .contact-item i {
+      min-width: 32px;
       text-align: center;
     }
+    .contact-label {
+      margin-bottom: 2px;
+    }
+    .contact-value {
+      font-size: 1.05rem;
+    }
     .about-company {
-      font-size: 0.95rem;
-      color: #333;
-      margin-bottom: 0.5rem;
+    .about-card {
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      border: none;
     }
-    .company-list {
-      font-size: 0.92rem;
+    .about-company-block {
+      margin-bottom: 1.2rem;
+    }
+    .about-company-details {
       color: #555;
-      margin-bottom: 0.5rem;
-      line-height: 1.4;
-    }
-
-    .company-list strong {
-      color: #4b4037;
-      font-weight: bold;
+      line-height: 1.5;
     }
     @media (max-width: 500px) {
       .profile-card {
@@ -119,39 +102,99 @@
       <div class="profile-title">CO-FOUNDER</div>
     </div>
     <div class="p-4">
-      <div class="section-title">Contact</div>
-      <ul class="contact-list mb-4">
-        <li><i class="bi bi-telephone"></i> <span>+34 667 188 171</span></li>
-        <li><i class="bi bi-envelope"></i> <span>anurag@noize-group.com</span></li>
-        <li><i class="bi bi-globe"></i> <span><a href="https://noize-group.com" target="_blank">noize-group.com</a></span></li>
-        <li><i class="bi bi-globe"></i> <span><a href="https://noizejeans.com" target="_blank">noizejeans.com</a></span></li>
-        <li><i class="bi bi-globe"></i> <span><a href="https://lovegen.com" target="_blank">lovegen.com</a></span></li>
-        <li><i class="bi bi-globe"></i> <span><a href="https://nds9.co" target="_blank">nds9.co</a> <span class="text-muted">(Noize Designs)</span></span></li>
-      </ul>
-      <div class="section-title">About the Company</div>
-      <div class="company-list">
-        <strong>NOIZE GROUP, BANGLADESH</strong><br>
-        Forum Twin Towers; Level 13- OS 2<br>
-        Plot 187 & 188 B, Tejgaon I/A, Dhaka, Bangladesh<br>
-        House 16 & 17 (Level # 10), Road 12, Sector 06, Uttara, Dhaka-1230, Bangladesh
-        <br><br>
-        <strong>NOIZE GROUP, USA</strong><br>
-        214 West, 39th Street, Suite 801, NY - 10018, New York, USA
-        <br><br>
-        <strong>NOIZE GROUP, HONG KONG</strong><br>
-        Unit 1308, 13/F, CEO Tower, 77 Wing Hong Street,<br>
-        Cheung Sha Wan, Kowloon, HongKong
-        <br><br>
-        <strong>NOIZE STUDIO, SPAIN</strong><br>
-        Rambla de Catalunya, 15, 1-2, 08007, Barcelona, Spain
-        <br><br>
-        <strong>NOIZE GROUP, UAE</strong><br>
-        U-Bora Office Tower<br>
-        Unit No. 1302, Business Bay, Dubai, UAE
-        <br><br>
-        <strong>NOIZE BRANDS & LIFESTYLE PVT. LTD INDIA</strong><br>
-        129, Sector 136, off Noida-Greater Noida Expressway.<br>
-        Noida, Uttar Pradesh - 201304, India
+
+      <div class="contact-card mb-4 p-3 rounded shadow-sm bg-white">
+        <div class="d-flex align-items-center mb-3">
+          <i class="bi bi-grid-3x3-gap-fill fs-4 me-2 text-secondary"></i>
+          <span class="fw-semibold fs-5">Contact</span>
+        </div>
+        <div class="contact-item d-flex align-items-start mb-3">
+          <i class="bi bi-telephone fs-5 me-3 text-secondary"></i>
+          <div>
+            <div class="contact-label text-muted small">Phone</div>
+            <div class="contact-value fw-semibold">+34 667 188 171</div>
+          </div>
+        </div>
+        <div class="contact-item d-flex align-items-start mb-3">
+          <i class="bi bi-envelope fs-5 me-3 text-secondary"></i>
+          <div>
+            <div class="contact-label text-muted small">Email</div>
+            <div class="contact-value fw-semibold">anurag@noize-group.com</div>
+          </div>
+        </div>
+        <div class="contact-item d-flex align-items-start mb-3">
+          <i class="bi bi-globe fs-5 me-3 text-secondary"></i>
+          <div>
+            <div class="contact-label text-muted small">Noize group</div>
+            <div class="contact-value fw-semibold"><a href="https://noize-group.com" class="text-dark text-decoration-none" target="_blank">noize-group.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item d-flex align-items-start mb-3">
+          <i class="bi bi-globe fs-5 me-3 text-secondary"></i>
+          <div>
+            <div class="contact-label text-muted small">Noize Jeans</div>
+            <div class="contact-value fw-semibold"><a href="https://noizejeans.com" class="text-dark text-decoration-none" target="_blank">noizejeans.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item d-flex align-items-start mb-3">
+          <i class="bi bi-globe fs-5 me-3 text-secondary"></i>
+          <div>
+            <div class="contact-label text-muted small">LoveGen</div>
+            <div class="contact-value fw-semibold"><a href="https://lovegen.com" class="text-dark text-decoration-none" target="_blank">lovegen.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item d-flex align-items-start">
+          <i class="bi bi-globe fs-5 me-3 text-secondary"></i>
+          <div>
+            <div class="contact-label text-muted small">NDS9 (Noize Designs)</div>
+            <div class="contact-value fw-semibold"><a href="https://nds9.co" class="text-dark text-decoration-none" target="_blank">nds9.co</a></div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="about-card p-3 rounded shadow-sm bg-white text-center mb-2">
+        <div class="fw-semibold fs-5 mb-3 text-dark">About the Company</div>
+        <div class="about-company-block mb-4">
+          <div class="fw-semibold text-uppercase text-secondary mb-1">NOIZE GROUP, BANGLADESH</div>
+          <div class="about-company-details small">
+            Forum Twin Towers; Level 13- OS 2<br>
+            Plot 187 & 188 B, Tejgaon I/A, Dhaka, Bangladesh<br>
+            House 16 & 17 (Level # 10), Road 12, Sector 06, Uttara, Dhaka-1230, Bangladesh
+          </div>
+        </div>
+        <div class="about-company-block mb-4">
+          <div class="fw-semibold text-uppercase text-secondary mb-1">NOIZE GROUP, USA</div>
+          <div class="about-company-details small">
+            214 West, 39th Street, Suite 801, NY - 10018, New York, USA
+          </div>
+        </div>
+        <div class="about-company-block mb-4">
+          <div class="fw-semibold text-uppercase text-secondary mb-1">NOIZE GROUP, HONG KONG</div>
+          <div class="about-company-details small">
+            Unit 1308, 13/F, CEO Tower, 77 Wing Hong Street,<br>
+            Cheung Sha Wan, Kowloon, HongKong
+          </div>
+        </div>
+        <div class="about-company-block mb-4">
+          <div class="fw-semibold text-uppercase text-secondary mb-1">NOIZE STUDIO, SPAIN</div>
+          <div class="about-company-details small">
+            Rambla de Catalunya, 15, 1-2, 08007, Barcelona, Spain
+          </div>
+        </div>
+        <div class="about-company-block mb-4">
+          <div class="fw-semibold text-uppercase text-secondary mb-1">NOIZE GROUP, UAE</div>
+          <div class="about-company-details small">
+            U-Bora Office Tower<br>
+            Unit No. 1302, Business Bay, Dubai, UAE
+          </div>
+        </div>
+        <div class="about-company-block">
+          <div class="fw-semibold text-uppercase text-secondary mb-1">NOIZE BRANDS & LIFESTYLE PVT. LTD INDIA</div>
+          <div class="about-company-details small">
+            129, Sector 136, off Noida-Greater Noida Expressway.<br>
+            Noida, Uttar Pradesh - 201304, India
+          </div>
+        </div>
       </div>
     </div>
   </div>
